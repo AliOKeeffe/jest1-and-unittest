@@ -1,4 +1,4 @@
-from datatime import date, timedelta
+from datetime import date, timedelta
 
 class Student:
     """A Student class as a bse for method testing"""
@@ -13,3 +13,16 @@ class Student:
     @property
     def full_name(self):
         return f"{self._first_name} {self._last_name}"
+    
+
+    def alert_santa(self):
+        self.naughty_list = True
+
+
+    @property
+    def email(self):
+        return f"{self._first_name.lower()}.{self._last_name.lower()}@email.com"
+
+
+    def apply_extension(self, days):
+        self.end_date += timedelta(days=days)
